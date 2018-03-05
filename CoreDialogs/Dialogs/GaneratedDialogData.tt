@@ -1,0 +1,29 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+using Core.Providers;
+
+namespace CoreDialogs.Dialogs
+{
+<# 
+  var classes = new List<string>() {"Save", "Open", "Folder"};
+
+  foreach(var newClass in classes)
+  {
+#>
+    public class <#= newClass #>Dialog : DialogData
+    {
+        public <#= newClass #>Dialog()
+        {
+            DialogShowType = ProviderTypes.DialogType.<#= newClass #>;
+        }
+    }
+
+<#
+  } 
+  
+#>
+}
