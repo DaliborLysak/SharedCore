@@ -10,7 +10,7 @@ namespace CoreIO
         {
             Methods = new Dictionary<ProviderTypes.FileManipulationOperationType, IFileManipulationMethod>()
             {
-                [ProviderTypes.FileManipulationOperationType.Copy] = new Empty(),
+                [ProviderTypes.FileManipulationOperationType.Copy] = new Copy(),
                 [ProviderTypes.FileManipulationOperationType.Exec] = new Execution(),
                 [ProviderTypes.FileManipulationOperationType.Load] = new Load(),
                 [ProviderTypes.FileManipulationOperationType.NotSet] = new Empty(),

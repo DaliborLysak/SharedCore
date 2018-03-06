@@ -1,5 +1,4 @@
 ﻿using Core.Providers;
-using CoreIO.Data;
 
 namespace CoreIO.Manipulation
 {
@@ -11,4 +10,3 @@ namespace CoreIO.Manipulation
         }
     }
 }
-
